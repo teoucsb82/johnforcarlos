@@ -7,12 +7,6 @@ gem 'pg'
 gem 'bootstrap-sass', '~> 2.3.2.1'
 gem 'devise'
 gem 'simple_form', '~> 3.0.0.rc'
-gem 'paperclip', "~> 3.4.2", branch: 'rails-4'
-gem "aws-s3"
-gem "aws-sdk"
-gem 'will_paginate', '3.0.3'
-gem 'bootstrap-will_paginate', '0.0.6'
-gem 'pony'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Use SCSS for stylesheets

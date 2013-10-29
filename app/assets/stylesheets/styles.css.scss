@@ -1,0 +1,81 @@
+$baseFontFamily: Metrophobic;
+@import url(http://fonts.googleapis.com/css?family=Metrophobic);
+
+/* Navbar elements 
+
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+
+*/
+
+/* Define navbarSearchBorder as background hero unit BG color */
+$navbarSearchBorder: #D1EAF3;
+
+/* Text elements */
+$bodyBackground: white;
+$textColor: black;
+
+
+/* Define navbarSearchBorder as background hero unit BG color */
+$navbarSearchBorder: #D1EAF3;
+
+@import 'bootstrap';
+body{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+@import 'bootstrap-responsive';
+
+.navbar-inner{
+    @include box-shadow(none !important);
+    border: 0;
+}
+
+.navbar-fixed-bottom{
+	padding-bottom: 20px;
+}
+
+.hero-unit {
+    padding: 30px;
+    background-color: $navbarSearchBorder;
+}
+
+.alert {
+	color: $textColor;
+}
+
+/* change the color behind the "update" and "sign up" buttons for user accounts */
+/*
+.form-actions {
+	background-color: $navbarSearchBorder;
+}
+ */
+
+/* Box for images */
+.box {
+    margin: 5px;
+    padding: 5px;
+    line-height: 1.4em;
+    float: left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #444;
+    width: 320px;
+}
+
+.box img {
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.description {
+    margin: 10px 0 5px;
+}
+
+.navbar-fixed-bottom{
+    padding-bottom: 0px;
+}
