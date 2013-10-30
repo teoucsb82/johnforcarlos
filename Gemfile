@@ -8,6 +8,8 @@ gem 'bootstrap-sass', '~> 2.3.2.1'
 gem 'devise'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

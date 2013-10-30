@@ -3,6 +3,9 @@
         <td>
         	<em>"<%=pin.description%>"</em> <br>
         	<strong>-<%= pin.name %></strong>
+        	<% t = pin.created_at %>
+        	<% t -= (7 * 60 * 60) %>
+        	<p style="font-size: .5em"><%= t.strftime("%B %d, %Y @ %I:%M %p") %> </p>
         </td>
 
         <% if user_signed_in? && current_user.admin? %>

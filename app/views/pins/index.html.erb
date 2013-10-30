@@ -17,10 +17,12 @@
             <%= render @pins %>
           </tbody>
         </table>
-
+        <center>
+            <%= will_paginate @pins %>
+        </center>
     </div>
   </div>
 </div>
 <center>
-  <%= link_to 'Leave A Message', new_pin_path, class: "btn btn-large" %><br>
+  <%= link_to 'Add Message', new_pin_path, class: "btn btn-large" %><br>
 </center>
