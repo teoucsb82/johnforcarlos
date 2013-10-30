@@ -16,7 +16,7 @@ $btnInfoBackground: #83AEC4;
 @import 'bootstrap';
 
 body{
-    padding-top: 0px;
+    padding-top: 40px;
 }
 
 @import 'bootstrap-responsive';
@@ -39,5 +39,9 @@ body{
 }
 
 p {
+    font-family: Oxygen;
+}
+
+li {
     font-family: Oxygen;
 }

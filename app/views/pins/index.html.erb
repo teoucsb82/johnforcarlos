@@ -1,0 +1,26 @@
+<% provide(:title, 'Messages') %>
+
+<div class="hero-unit">
+  <h2 align="center"><%= yield(:title) %></h2>
+  <div class="row">
+    <div class="span9 offset1">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <%= render @pins %>
+          </tbody>
+        </table>
+
+    </div>
+  </div>
+</div>
+<center>
+  <%= link_to 'Leave A Message', new_pin_path, class: "btn btn-large" %><br>
+</center>

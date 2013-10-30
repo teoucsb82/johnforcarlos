@@ -1,0 +1,13 @@
+
+      <tr>
+        <td>
+        	<em>"<%=pin.description%>"</em> <br>
+        	<strong>-<%= pin.name %></strong>
+        </td>
+
+        <% if user_signed_in? && current_user.admin? %>
+	        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	    <% else %>
+	    	<td></td>
+	    <% end %>
+      </tr>

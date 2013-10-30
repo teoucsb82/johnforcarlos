@@ -1,0 +1,17 @@
+<% provide(:title, 'Message Added') %>
+
+<div class="hero-unit">
+  <h1><%= yield(:title) %></h1>
+
+<p>
+  <strong>From:</strong>
+  <%= @pin.name %>
+</p>
+
+<p>
+  <em><%= @pin.description %></em>
+</p>
+
+<%= render 'edit' %>
+<%= render 'back' %>
+</div>
