@@ -6,17 +6,11 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
   <%= csrf_meta_tags %>
+	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 </head>
 <body>
-  <!--
-	<%= render 'layouts/header' %>
-  -->
-	<div class="container">
-		<% flash.each do |name, msg| %>
-                <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-        <% end %>
-	    <%= yield %>
-	</div>
-
+	<div class="container well">
+  <%= yield %>
+</div>
 </body>
 </html>
