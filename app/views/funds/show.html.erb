@@ -1,0 +1,35 @@
+<% if user_signed_in? && current_user.admin? %>
+<% provide(:title, 'Donation Received') %>
+
+<div class="hero-unit">
+  <h1><%= yield(:title) %></h1>
+  <hr>
+  
+  <p>
+  <strong>From:</strong>
+  <%= @fund.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fund.email %>
+</p>
+
+<p>
+  <strong>Dollars:</strong>
+  <%= number_to_currency(@fund.dollars) %>
+</p>
+
+<p>
+	  <strong>Received: </strong>
+		<% t = @fund.created_at %>
+    	<% t -= (7 * 60 * 60) %>
+    	<%= t.strftime("%B %d, %Y @ %I:%M %p") %>
+</p>
+<hr>
+<%= link_to 'Confirm Payment', edit_fund_path(@fund), class: "btn btn-success btn-large" %><br>
+<p>
+<%= link_to '<< Back', funds_path, class: "btn btn-inverse" %>
+</p>
+</div>
+<% end %>

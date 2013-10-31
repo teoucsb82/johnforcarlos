@@ -1,4 +1,6 @@
 Johnforcarlos::Application.routes.draw do
+  resources :funds
+
   resources :pins
 
   devise_for :users

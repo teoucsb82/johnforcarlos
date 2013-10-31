@@ -1,0 +1,15 @@
+<% if user_signed_in? && current_user.admin? %>
+
+<% provide(:title, 'Confirm Donation') %>
+
+<div class="hero-unit">
+  <h1><%= yield(:title) %></h1>
+  <hr>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @fund %> |
+<%= link_to 'Back', funds_path %>
+
+</div>
+<% end %>

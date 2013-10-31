@@ -1,0 +1,38 @@
+<% if user_signed_in? && current_user.admin? %>
+
+<% provide(:title, 'Donations Received') %>
+
+<div class="hero-unit">
+  <h1>
+    Total Donations Received: 
+    <% total = 0 %>
+    <% @funds.each do |x| %>
+      <% if x.paid? %>
+        <% total += x.dollars %>
+      <% end %>
+    <% end %>  
+    <%= number_to_currency(total) %>
+  </h1>
+  <hr>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>From</th>
+        <th>Donation Amount</th>
+        <th>Received</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render @funds %>
+    </tbody>
+  </table>
+        <center>
+            <%= will_paginate @funds %>
+        </center>
+</div>
+
+<% end %>

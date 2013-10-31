@@ -1,7 +1,7 @@
 <% provide(:title, 'Message Added') %>
 
 <div class="hero-unit">
-  <h1><%= yield(:title) %></h1>
+  <h1><%= yield(:title) %></h1><hr>
 
 <p>
   <strong>From:</strong>
@@ -12,4 +12,8 @@
 
 <%= render 'edit' %>
 <%= render 'back' %>
+
+
+<%= render '/charges#new' %>
+
 </div>

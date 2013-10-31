@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131030212636) do
+ActiveRecord::Schema.define(version: 20131030235436) do
 
   create_table "donations", force: true do |t|
     t.string   "name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20131030212636) do
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "funds", force: true do |t|
+    t.string   "email"
+    t.integer  "dollars"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.boolean  "paid"
   end
 
   create_table "pins", force: true do |t|

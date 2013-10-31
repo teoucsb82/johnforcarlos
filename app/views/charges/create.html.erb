@@ -1,2 +1,20 @@
+<% provide(:title, 'Donation Received') %>
 
-<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+<div class="hero-unit">
+  <h1><%= yield(:title) %>!</h1>
+  <hr>
+  <p>
+    Dear <%= Fund.last.name %>,
+  </p>
+  <p>
+  	Thank you so much for your donation to John for Carlos! 100% of every dollar donated will be put into a trust fund for Carlos' education, and your donation of $<%= Fund.last.dollars %> is greatly appreciated.
+  </p>
+  <p>
+  	A receipt has been sent to <%= Fund.last.email %>.
+  </p>
+  <p>
+  	Thank you, <br>
+  	The Iasons
+  </p><hr>
+<p><%= link_to 'Home', root_path, class: "btn btn-inverse" %></p>
+</div>

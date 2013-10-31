@@ -1,0 +1,18 @@
+<%= simple_form_for(@fund, html: { class: "form-horizontal"}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :email, label: "Email Address" %>
+    <%= f.input :dollars, label: "Donation Amount $", placeholder: "20.00"%>
+	
+	<% if user_signed_in? && current_user.admin? %>
+	    <%= f.input :paid, label: "Payment was received", as: :radio_buttons %>
+   	<% end %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Make Donation", class: "btn btn-primary" %>
+  </div>
+<% end %>

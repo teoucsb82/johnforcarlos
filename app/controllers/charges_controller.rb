@@ -4,10 +4,10 @@ class ChargesController < ApplicationController
 
 	def create
 	  # Amount in cents
-	  @amount = 500
+	  @amount = Fund.last.dollars * 100
 
 	  customer = Stripe::Customer.create(
-	    :email => 'example@stripe.com',
+	    :email => Fund.last.email,
 	    :card  => params[:stripeToken]
 	  )
 
