@@ -4,7 +4,7 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :email, label: "Email Address" %>
-    <%= f.input :dollars, label: "Donation Amount $", placeholder: "20.00"%>
+    <%= f.input :dollars, label: "Donation Amount $"%>
 	
 	<% if user_signed_in? && current_user.admin? %>
 	    <%= f.input :paid, label: "Payment was received", as: :radio_buttons %>
