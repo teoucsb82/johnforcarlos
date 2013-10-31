@@ -10,7 +10,7 @@
     	<% t -= (7 * 60 * 60) %>
     	<%= t.strftime("%B %d, %Y @ %I:%M %p") %>
     </td>
-    <td><%= link_to "View Donation", fund, class: "btn btn-primary" %></td>
+    <td><%= link_to "Verify Donation", fund, class: "btn btn-primary" %></td>
     <td>
         <% unless fund.paid? %>
             <%= link_to 'Destroy', fund, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
