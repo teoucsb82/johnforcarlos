@@ -6,7 +6,7 @@
   <h1>
     Total Donations Received: 
     <% total = 0 %>
-    <% @funds.each do |x| %>
+    <% Fund.all.each do |x| %>
       <% if x.paid? %>
         <% total += x.dollars %>
       <% end %>
